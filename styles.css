@@ -1,0 +1,436 @@
+/* Header styles */
+header {
+    background: linear-gradient(to left,white,pink,deeppink,pink,white);
+    display: flex;
+    justify-content: space-between; /* Keeps logo on the left */
+    align-items: center;
+    padding: 0; /* No padding */
+    color: white;
+}
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover; /* You can set your hero image */
+    color: black;
+    text-align: center;
+    padding: 10rem 1rem 4rem; /* Adjusts the vertical space */
+    height: 500px;
+}
+.hero h1 {
+    font-size: 3rem; /* Large font size for prominence */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero .btn {
+    display: inline-block;
+    background-color: deeppink;
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: darkkhaki;
+}
+
+/* Flexbox for layout and spacing */
+.facilities {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly; /* Space out the cards evenly */
+    gap: 2rem; /* Adds space between the cards */
+    flex-wrap: wrap; /* Ensure cards wrap on small screens */
+}
+/* About Page Styles */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 60%;
+    padding-right: 2rem;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: deeppink;
+    margin-bottom: 1.5rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.about .mission, .about .team {
+    margin-top: 2rem;
+}
+
+.about .mission h2, .about .team h2 {
+    font-size: 2rem;
+    color: deeppink;
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 35%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+}
+
+/* Facility Card Styling */
+.facility {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 500px; /* Ensures no card exceeds 300px */
+    width: 100%; /* Takes full width up to the max-width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: left; /* Left-align text in the card */
+}
+
+.facility img {
+    width: 100%;
+    height: 600px; /* Sets a fixed height for the images */
+    object-fit: cover;
+}
+
+.facility h3 {
+    font-size: 2rem;
+    color: #333;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+.facility p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 1rem 1rem; /* Added left/right margin to ensure text doesn't touch edges */
+    text-align: left; /* Ensures paragraph text is left-aligned */
+}
+
+/* Hover effect for facility cards */
+.facility:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Media Query for small screens (like mobile) */
+@media (max-width: 768px) {
+    .facilities {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center the cards */
+    }
+
+    .facility {
+        width: 100%; /* Make the facility cards take up full width on mobile */
+        margin-bottom: 2rem; /* Adds space between the stacked cards */
+    }
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-img {
+    width: 7rem;
+    padding-left: 1rem;
+    height: 7rem;
+}
+
+header h1 {
+    font-size: 2rem; /* Increased font size for the logo text */
+    font-weight: bold;
+    margin-left: 1rem; /* Adds space between the logo image and the text */
+}
+
+header nav {
+    flex-grow: 1; /* Makes nav container take remaining space */
+    display: flex;
+    justify-content: center; /* Centers nav items */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Increased gap between menu items */
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem; /* Increased font size for the nav links */
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffeaa7;
+}
+
+
+/* Footer styles */
+footer {
+    background: linear-gradient(to left,white,pink,deeppink,pink,white);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #f8c291;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: white;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* products Section */
+/* General Styling for products Page */
+.products {
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+}
+
+.products h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: deeppink;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+/* product Card Styling */
+.product-card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 500px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: deeppink;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: gray;
+    margin: 0.5rem 1rem;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    margin: 1rem 0;
+}
+
+.product-card .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    background: deeppink;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.product-card .btn:hover {
+    background: darkkhaki;
+    color: white;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Login Page Styling */
+/* Reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-page Background Image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/shop-bg.png'); /* Replace with your luxurious parlour image */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Keep it behind the content */
+}
+
+/* Page Container */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Centered Main Content */
+.centered-container {
+    flex: 1; /* Pushes the footer to the bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Form Styling */
+.login-container {
+    background: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Optional: Adds a glassy effect */
+}
+
+.login-container h1 {
+    margin-bottom: 1rem;
+    color: deeppink;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin: 0.5rem 0 0.3rem;
+}
+
+.login-container input,textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex-grow: 1;
+}
+
+
+.login-container .btn {
+    padding: 0.7rem;
+    background: deeppink;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-container .btn:hover {
+    background: #f8c291;
+}
+
+.login-container p {
+    margin-top: 1rem;
+}
+
+.login-container a {
+    color: deeppink;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer Styling */
